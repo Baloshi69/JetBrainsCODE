@@ -1,0 +1,63 @@
+"""
+Write a program that reads numbers until a user enters 55. Once 55 is entered, stop reading the input, print out how many numbers have been entered,
+their total sum, and average (do the rounding this way: round(number)).
+Do NOT include 55 in your calculations and print each resulting value on a new line in the order given above.
+"""
+
+"""
+Sample Input 1:
+
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+55
+17
+16
+15
+14
+13
+
+##############
+
+Sample Output 1:
+
+18
+153
+8
+"""
+
+# put your code here
+
+user_input = 0  # For Loop, to work and stop when this is 55.
+num_wrt = []    # To Store numbers.
+
+while user_input != 55:           # While loop, untille loop is not equl to 55, RUN
+    user_input = int(input())     # Ask user for number, and convert it into int,
+    num_wrt.append(user_input)    # Add user input into, list
+
+num_wrt.pop(-1)                   # pop out, last number from list, which is 55
+
+# Uncommit it, if you want to
+#for len in num_wrt:              # Print each number in list, Seperatley.
+#    print(len)
+
+print(len(num_wrt))               # Print the total numbers in list
+
+print(sum(num_wrt))               # Print the sum of totals number.
+
+print(round(sum(num_wrt) / len(num_wrt)))   # Print the Average of total numbers.
