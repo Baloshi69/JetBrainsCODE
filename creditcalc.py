@@ -24,9 +24,11 @@ if loan_type == "n":
     years = mon_repay // 12
     months = mon_repay % 12
 
-    # Evaluating, if month is > 0, then it need yeas and month, else it is paying in years,
-    if months > 0:
+    # Evaluating, if month is > 0, then it means you need years and month, else you will pay only in  years,
+    if years > 0 and months > 0:
         print(f"it will take {years} years, and {months} months to repay the loan")
+    elif year <= 0 and month  > 0:
+        print(f"it will take {months} months to repay the loan")
     else:
         print(f"it will take {years} years to repay this loan!")
 
